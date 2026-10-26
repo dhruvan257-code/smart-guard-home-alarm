@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#081426">
+<title>Smart Home Alarm | Safety Starts at Home</title>
+<style>
+:root{--bg:#07111f;--panel:#101f33;--panel2:#132840;--text:#eef6ff;--muted:#a8bbd1;--cyan:#55e6d0;--blue:#6ba8ff;--amber:#ffcc70;--red:#ff647c;--line:rgba(255,255,255,.1);--shadow:0 24px 70px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#17365a 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1160px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{display:flex;gap:11px;align-items:center;font-weight:800;letter-spacing:.2px}.brand-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#061426;font-size:22px;box-shadow:0 8px 24px #55e6d033}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--cyan)}.pill{border:1px solid #55e6d055;background:#55e6d012;border-radius:999px;padding:7px 12px;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;display:inline-flex;align-items:center;gap:7px}.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;padding:68px 0 88px}.eyebrow{color:var(--cyan);font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(42px,6vw,70px);line-height:1.04;letter-spacing:-2.6px;margin:18px 0}.hero h1 span{background:linear-gradient(100deg,var(--cyan),#a8caff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:600px;color:var(--muted);font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:27px 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border:1px solid var(--line);border-radius:13px;color:var(--text);background:#ffffff08;cursor:pointer;font-weight:750;transition:.2s}.btn:hover{transform:translateY(-2px);border-color:#55e6d088}.btn.primary{background:linear-gradient(110deg,var(--cyan),#9ce9ff);color:#071426;border:0;box-shadow:0 12px 28px #55e6d022}.checks{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13px}.checks span::before{content:"✓";color:var(--cyan);font-weight:900;margin-right:6px}.hero-visual{position:relative;min-height:430px;display:grid;place-items:center}.orb{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,#55e6d020,transparent 68%);border:1px solid #55e6d022}.device{position:relative;width:min(100%,390px);padding:24px;border-radius:28px;border:1px solid #ffffff20;background:linear-gradient(145deg,#172c45dd,#0b1728f5);box-shadow:var(--shadow);transform:none}.device-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.device-title{font-weight:800;color:var(--text);font-size:15px}.lcd{margin:24px 0 18px;padding:21px 17px;border:1px solid #55e6d055;border-radius:13px;background:linear-gradient(135deg,#071e2a,#0b2a34);font-family:"Courier New",monospace;color:var(--cyan);text-align:center;box-shadow:inset 0 0 28px #55e6d00b}.lcd small{display:block;letter-spacing:2px;font-size:10px;margin-bottom:9px;color:#7ebfb9}.lcd strong{font-size:17px;letter-spacing:1px}.sensor-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sensor{padding:14px;border:1px solid var(--line);background:#ffffff05;border-radius:15px}.sensor .icon{font-size:21px}.sensor b{display:block;font-size:13px;margin:5px 0 0}.sensor small{color:var(--muted);font-size:11px}.statusline{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:var(--muted);font-size:12px}.statusline b{color:var(--cyan)}.float-tag{position:absolute;padding:12px 15px;border-radius:14px;border:1px solid var(--line);background:#10233a;box-shadow:var(--shadow);font-size:12px;font-weight:750}.tag1{top:47px;right:-8px}.tag2{bottom:37px;left:-8px}.section{padding:74px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.section-head h2{font-size:clamp(28px,4vw,42px);letter-spacing:-1px;margin:10px 0}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:23px;border:1px solid var(--line);background:linear-gradient(145deg,#11233a,#0c192a);border-radius:20px;box-shadow:0 12px 40px #00000012}.card-icon{width:47px;height:47px;display:grid;place-items:center;border-radius:15px;background:#55e6d014;font-size:24px;margin-bottom:17px}.card h3{margin:0 0 7px;font-size:18px}.card p{color:var(--muted);font-size:14px;margin:0}.tag{display:inline-block;margin-top:16px;font-size:11px;color:var(--cyan);border:1px solid #55e6d033;padding:4px 9px;border-radius:999px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.step-num{font-size:12px;color:var(--cyan);letter-spacing:1.5px;font-weight:900}.step h3{margin:8px 0}.step p{font-size:14px;color:var(--muted);margin:0}.demo-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px;align-items:stretch}.demo-panel{border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#11243a,#0c1828);padding:24px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}.panel-head h3{margin:0}.small-muted{font-size:12px;color:var(--muted)}.demo-lcd{padding:23px 16px;border-radius:14px;background:#061b26;border:1px solid #55e6d055;color:var(--cyan);font-family:"Courier New",monospace;text-align:center;min-height:108px;display:grid;align-content:center;gap:4px}.demo-lcd small{color:#84c8c2;letter-spacing:2px}.demo-lcd strong{font-size:18px}.demo-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.demo-buttons .btn{font-size:13px;padding:11px 9px}.btn.good{border-color:#55e6d055}.btn.bad{border-color:#ff647c66}.btn.warn{border-color:#ffcc7066}.demo-status{margin-top:15px;display:flex;align-items:center;gap:9px;padding:12px 13px;border-radius:12px;background:#ffffff06;color:var(--muted);font-size:13px}.status-dot{width:9px;height:9px;border-radius:50%;background:var(--cyan)}.status-dot.red{background:var(--red);box-shadow:0 0 12px #ff647c77}.gas-number{font-size:30px;font-weight:850;letter-spacing:-1px}.range{width:100%;accent-color:var(--cyan);margin:15px 0}.meter{height:8px;border-radius:99px;background:#ffffff12;overflow:hidden}.meter-fill{height:100%;width:15%;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--amber),var(--red));transition:width .25s}.log{margin-top:17px;padding:14px;border-radius:13px;background:#071321;border:1px solid var(--line);max-height:145px;overflow:auto;font:12px/1.8 "Courier New",monospace;color:#a7c2d7}.log div:first-child{color:var(--cyan)}.notice{margin-top:20px;border:1px solid #ffcc7040;background:#ffcc700b;border-radius:15px;padding:15px;color:#dfd3b9;font-size:13px}.notice strong{color:var(--amber)}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:17px}.table{width:100%;border-collapse:collapse;min-width:560px;background:#0e1c2d}.table th,.table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:13px}.table th{color:var(--cyan);background:#ffffff05}.table td{color:var(--muted)}.table tr:last-child td{border-bottom:0}.safety{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;border:1px solid #ff647c45;background:#ff647c0b;border-radius:18px;padding:22px}.safety .icon{font-size:28px}.safety h3{margin:0 0 5px}.safety p{margin:0;color:var(--muted);font-size:14px}.footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.reveal{animation:rise .7s ease both}@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}@media(max-width:850px){.hero{grid-template-columns:1fr;gap:20px;padding:45px 0 60px}.hero-visual{min-height:390px}.cards,.steps{grid-template-columns:repeat(2,1fr)}.demo-layout{grid-template-columns:1fr}.navlinks{gap:13px}.tag1{right:0}.tag2{left:0}}@media(max-width:560px){.navlinks{display:none}.hero h1{letter-spacing:-1.5px}.cards,.steps{grid-template-columns:1fr}.hero-visual{min-height:360px}.device{padding:18px}.float-tag{font-size:10px;padding:9px}.section{padding:55px 0}.demo-panel{padding:17px}.checks{gap:9px}.footer-inner{display:block}.footer-inner span{display:block;margin:5px 0}}
+
+/* Light, parent-friendly presentation theme */
+:root{--bg:#f5f8fc;--panel:#ffffff;--panel2:#eef4fb;--text:#14243a;--muted:#5c6d82;--line:rgba(25,52,82,.13);--shadow:0 24px 70px rgba(31,57,88,.12)}
+body{background:radial-gradient(ellipse at 82% 0%,#dceeff 0,transparent 38%),#f7faff;color:var(--text)}
+.navlinks{color:#5c6d82}.pill{background:#e9fbf8;color:#087f75;border-color:#9ce8df}.dot{background:#12b8a6;box-shadow:0 0 10px #12b8a655}
+.hero h1 span{background:linear-gradient(100deg,#078f86,#3878d8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{color:#078f86}.checks{color:#52657b}.checks span::before{color:#079b8d}
+.btn{color:#20334a;background:#ffffff;border-color:#d7e1ed}.btn:hover{border-color:#79cfc7}.btn.primary{background:linear-gradient(110deg,#68e0d0,#b5e7ff);color:#092239}
+.card,.demo-panel{background:linear-gradient(145deg,#ffffff,#f4f8fd);border-color:#dfe8f2;box-shadow:0 12px 40px rgba(28,55,88,.045)}
+.card p,.step p,.section-head p,.small-muted{color:#5c6d82}.card-icon{background:#e7f9f6}.tag{color:#087f75;border-color:#b9e9e3;background:#f0fcfa}
+.float-tag{background:#ffffff;color:#20334a;border-color:#dfe8f2;box-shadow:0 14px 34px rgba(31,57,88,.13)}
+.orb{background:radial-gradient(circle,#55e6d020,transparent 68%);border-color:#b9e9e355}
+.sensor{background:#ffffff12;border-color:#ffffff24}.device{background:linear-gradient(145deg,#ffffff,#f3f8fc);border-color:#d9e5f0;box-shadow:0 24px 70px rgba(31,57,88,.14);transform:none}.device-top{color:#5c6d82}.device-title{color:#14243a}.sensor{background:#f7fbff;border-color:#dfe8f2}.sensor b{color:#14243a}.sensor small{color:#5c6d82}.statusline{color:#5c6d82}.statusline b{color:#087f75}
+.demo-status{background:#edf3f9;color:#52657b}.table{background:#ffffff}.table th{color:#087f75;background:#eff8f8}.table td{color:#52657b}.table th,.table td{border-bottom-color:#e3ebf3}
+.safety{background:#fff7f5;border-color:#f6c9c6}.safety p{color:#5c6d82}.notice{background:#fff9e9;border-color:#f3dfa6;color:#66583b}.notice strong{color:#8c6500}
+.footer{border-top-color:#dfe8f2;color:#65768a}.footer-inner strong{color:#14243a!important}
+@media(max-width:560px){.float-tag{background:#fff}}
+
+</style>
+</head>
+<body>
+<header class="wrap">
+  <nav class="nav">
+    <a class="brand" href="#top"><span class="brand-icon">⌂</span><span>SMART<span style="color:var(--cyan)">GUARD</span></span></a>
+    <div class="navlinks"><a href="#about">About</a><a href="#components">Components</a><a href="#how">How it works</a><a href="#demo">Live demo</a></div>
+    <a class="pill" href="#demo"><span class="dot"></span> Interactive demo</a>
+  </nav>
+</header>
+<main id="top" class="wrap">
+  <section class="hero">
+    <div class="reveal">
+      <div class="eyebrow">Smart security · Family safety</div>
+      <h1>A safer home.<br><span>A smarter idea.</span></h1>
+      <p>A student-built Smart Home Alarm concept that combines RFID access, PIN protection and gas-level alerts in one thoughtful home-safety system.</p>
+      <div class="actions"><a class="btn primary" href="#demo">▶ Try the live demo</a><a class="btn" href="#how">Explore how it works <span>↘</span></a></div>
+      <div class="checks"><span>RFID access</span><span>PIN protection</span><span>Gas warning</span><span>LCD + buzzer</span></div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="orb"></div>
+      <div class="float-tag tag1">🛡️ Access protection</div>
+      <div class="float-tag tag2">🫧 Gas monitoring</div>
+      <div class="device">
+        <div class="device-top"><span class="device-title">SMART GUARD · HOME UNIT</span><span>● ONLINE</span></div>
+        <div class="lcd"><small>HOME SECURITY SYSTEM</small><strong id="heroLcd">SCAN RFID OR ENTER PIN</strong></div>
+        <div class="sensor-grid">
+          <div class="sensor"><span class="icon">💳</span><b>RFID Reader</b><small>Scan your access card</small></div>
+          <div class="sensor"><span class="icon">🔢</span><b>Keypad</b><small>Enter your security PIN</small></div>
+          <div class="sensor"><span class="icon">🫧</span><b>Gas Sensor</b><small>Continuous gas monitoring</small></div>
+          <div class="sensor"><span class="icon">🔔</span><b>Audio Alert</b><small>Buzzer warning sound</small></div>
+        </div>
+        <div class="statusline"><span>System status</span><b id="heroStatus">● READY</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-head"><div class="eyebrow">The idea behind the build</div><h2>Small components. A big purpose.</h2><p>This project demonstrates how a controller can check access credentials while continuously watching for a possible gas hazard.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-icon">🔐</div><h3>Two ways to enter</h3><p>Use an authorised RFID card or the correct keypad PIN to simulate accepted access.</p><span class="tag">ACCESS CONTROL</span></article>
+      <article class="card"><div class="card-icon">🚫</div><h3>Clear rejection</h3><p>An unknown card or incorrect PIN displays a helpful message and triggers an error sound.</p><span class="tag">PIN + RFID CHECK</span></article>
+      <article class="card"><div class="card-icon">🫧</div><h3>Safety comes first</h3><p>A high simulated gas reading takes priority over access messages and activates a warning.</p><span class="tag">ALERT PRIORITY</span></article>
+    </div>
+  </section>
+
+  <section id="components" class="section">
+    <div class="section-head"><div class="eyebrow">Project components</div><h2>Every part has a purpose.</h2><p>The main hardware modules work together through an Arduino or ESP32 controller. No LEDs are required in this version.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-icon">🔢</div><h3>4×4 membrane keypad</h3><p>Provides 16 keys for entering a secret PIN. The controller checks whether it matches the saved PIN.</p><span class="tag">INPUT DEVICE</span></article>
+      <article class="card"><div class="card-icon">💳</div><h3>RFID reader + tag</h3><p>Reads a compatible card or tag identifier. Approved tags are accepted; unknown tags are rejected.</p><span class="tag">INPUT DEVICE</span></article>
+      <article class="card"><div class="card-icon">🫧</div><h3>Gas sensor · MQ-2 example</h3><p>Produces a signal that can change with certain gases or smoke. Real hardware needs warm-up and calibration.</p><span class="tag">SENSOR INPUT</span></article>
+      <article class="card"><div class="card-icon">🖥️</div><h3>LCD display</h3><p>Shows instructions and results such as “Access Granted”, “Wrong PIN” or a gas-warning message.</p><span class="tag">VISUAL OUTPUT</span></article>
+      <article class="card"><div class="card-icon">🔔</div><h3>Buzzer</h3><p>Plays a short confirmation beep, an error pattern or a repeating warning tone.</p><span class="tag">AUDIO OUTPUT</span></article>
+      <article class="card"><div class="card-icon">🧠</div><h3>Arduino / ESP32</h3><p>Reads sensors, checks credentials, updates the LCD and controls the buzzer. Wiring depends on the board.</p><span class="tag">CONTROLLER</span></article>
+    </div>
+  </section>
+
+  <section id="how" class="section">
+    <div class="section-head"><div class="eyebrow">The process</div><h2>How the system responds</h2><p>A simple, easy-to-explain flow for a classroom or family presentation.</p></div>
+    <div class="steps">
+      <article class="card step"><div class="step-num">STEP 01</div><h3>Power on</h3><p>The controller starts the modules and the LCD prompts: “Scan RFID or enter PIN”.</p></article>
+      <article class="card step"><div class="step-num">STEP 02</div><h3>Check credentials</h3><p>A recognised card or correct PIN displays “Access Granted” and gives one short beep.</p></article>
+      <article class="card step"><div class="step-num">STEP 03</div><h3>Reject invalid access</h3><p>An unknown card displays “Access Denied”; a wrong PIN displays “Wrong PIN”. Both trigger error beeps.</p></article>
+      <article class="card step"><div class="step-num">STEP 04</div><h3>Keep monitoring gas</h3><p>The gas sensor is checked continuously, including while someone is entering a PIN.</p></article>
+      <article class="card step"><div class="step-num">STEP 05</div><h3>Raise an urgent alert</h3><p>When the reading passes the configured threshold, the urgent LCD message and warning sound take priority.</p></article>
+      <article class="card step"><div class="step-num">STEP 06</div><h3>Return to ready</h3><p>After the reading returns below a calibrated reset level, the system can return to its ready screen.</p></article>
+    </div>
+  </section>
+
+  <section id="demo" class="section">
+    <div class="section-head"><div class="eyebrow">Try it yourself</div><h2>Interactive live demo</h2><p>Tap a scenario to see the LCD message, system status and buzzer response. This is a browser simulation—not connected to physical hardware.</p></div>
+    <div class="demo-layout">
+      <div class="demo-panel">
+        <div class="panel-head"><h3>🖥️ LCD screen</h3><span class="pill"><span class="dot"></span> SIMULATION</span></div>
+        <div class="demo-lcd" aria-live="polite"><small id="lcdLabel">SMART HOME ALARM</small><strong id="lcdMessage">SCAN RFID OR ENTER PIN</strong><span id="lcdSub" style="font-size:12px">System ready</span></div>
+        <div class="demo-buttons">
+          <button class="btn good" onclick="runScenario('correctCard')">✓ Correct RFID card</button>
+          <button class="btn bad" onclick="runScenario('wrongCard')">✕ Wrong RFID card</button>
+          <button class="btn good" onclick="runScenario('correctPin')">✓ Correct PIN</button>
+          <button class="btn bad" onclick="runScenario('wrongPin')">✕ Wrong PIN</button>
+          <button class="btn warn" onclick="testBeep()">♪ Test beep</button>
+          <button class="btn" onclick="resetDemo()">↻ Reset demo</button>
+        </div>
+        <div class="demo-status"><span class="status-dot" id="statusDot"></span><span id="statusText">System ready. No alert is active.</span></div>
+        <p class="small-muted" style="margin-bottom:0">Demo authorised tag: <strong style="color:var(--text)">04 A1 B2 C3</strong> · Demo PIN: <strong style="color:var(--text)">2580</strong></p>
+      </div>
+      <div class="demo-panel">
+        <div class="panel-head"><h3>🫧 Gas sensor simulation</h3><span class="small-muted">Illustrative level</span></div>
+        <div style="display:flex;align-items:end;justify-content:space-between;gap:12px"><div><div class="small-muted">Simulated sensor level</div><div class="gas-number"><span id="gasValue">15</span><span style="font-size:16px;color:var(--muted)">%</span></div></div><span class="pill" id="gasState"><span class="dot"></span> NORMAL</span></div>
+        <input class="range" id="gasSlider" type="range" min="0" max="100" value="15" aria-label="Simulated gas level" oninput="updateGas(this.value)">
+        <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+        <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-top:7px"><span>Low</span><span>Demo threshold: 60%</span><span>High</span></div>
+        <div class="demo-status"><span class="status-dot" id="gasDot"></span><span id="gasText">Normal simulated level. No gas warning.</span></div>
+        <div class="log" id="activityLog" aria-live="polite"><div>[READY] Simulation started.</div><div>[INFO] Scan RFID or enter PIN.</div></div>
+        <div class="notice"><strong>Demo note:</strong> The percentage is only an illustration, not a real gas concentration or a calibrated sensor value.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div class="eyebrow">Expected results</div><h2>At-a-glance response guide</h2></div>
+    <div class="table-wrap"><table class="table"><thead><tr><th>Detected event</th><th>LCD message</th><th>Buzzer</th></tr></thead><tbody>
+      <tr><td>System starts</td><td>Scan RFID or enter PIN</td><td>Off</td></tr>
+      <tr><td>Correct RFID card / PIN</td><td>Access Granted · Welcome Home</td><td>One short beep</td></tr>
+      <tr><td>Wrong RFID card</td><td>Access Denied · Wrong Card</td><td>Error beeps</td></tr>
+      <tr><td>Wrong keypad PIN</td><td>Wrong PIN · Try Again</td><td>Error beeps</td></tr>
+      <tr><td>Gas level above threshold</td><td>GAS DETECTED! · EVERYONE GO OUTSIDE</td><td>Repeating warning</td></tr>
+    </tbody></table></div>
+    <div class="safety" style="margin-top:24px"><div class="icon">⚠️</div><div><h3>Real-world safety matters</h3><p>This is an educational concept, not a certified alarm. If you suspect a real gas leak, leave the area immediately, avoid flames and do not operate electrical switches. Contact local emergency services or your gas supplier from a safe location. Never rely on a hobby sensor as your only protection.</p></div></div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><span>⌂ <strong style="color:var(--text)">SMARTGUARD</strong> · Smart Home Alarm System</span><span>Interactive educational demo · No LEDs in this version · Not connected to physical hardware</span></div></footer>
+<script>
+const $ = id => document.getElementById(id);
+let gasAlert = false;
+function log(message){const el=$('activityLog');const line=document.createElement('div');line.textContent='['+new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',second:'2-digit'})+'] '+message;el.prepend(line);while(el.children.length>7)el.removeChild(el.lastChild);}
+function tone(freq=800,duration=.12,volume=.045){try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const ctx=new C();const osc=ctx.createOscillator();const gain=ctx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.value=volume;osc.connect(gain);gain.connect(ctx.destination);osc.start();gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+duration);osc.stop(ctx.currentTime+duration);osc.onended=()=>ctx.close();}catch(e){}}
+function showScreen(label,message,sub,status,isError=false){$('lcdLabel').textContent=label;$('lcdMessage').textContent=message;$('lcdSub').textContent=sub;$('statusText').textContent=status;$('statusDot').className='status-dot'+(isError?' red':'');$('heroLcd').textContent=message;$('heroStatus').textContent=isError?'● ALERT':'● READY';}
+function runScenario(which){
+ if(gasAlert){showScreen('⚠ GAS ALERT ACTIVE','GAS DETECTED!','EVERYONE GO OUTSIDE','Gas warning has priority. Access message paused.',true);log('Access event paused: gas alert has priority.');return;}
+ const scenarios={
+ correctCard:['ACCESS CHECK','ACCESS GRANTED','WELCOME HOME','Authorised RFID card accepted.',false,880],
+ wrongCard:['ACCESS CHECK','ACCESS DENIED','WRONG CARD','Unknown card rejected. Error alert active.',true,260],
+ correctPin:['PIN CHECK','ACCESS GRANTED','WELCOME HOME','Correct PIN accepted.',false,880],
+ wrongPin:['PIN CHECK','WRONG PIN','TRY AGAIN','Incorrect PIN. Please try again.',true,260]
+ };const s=scenarios[which];showScreen(s[0],s[1],s[2],s[3],s[4]);tone(s[5],.16);if(s[4])setTimeout(()=>tone(220,.16),210);log(s[3]);
+}
+function updateGas(value){value=Number(value);$('gasValue').textContent=value;$('meterFill').style.width=value+'%';const high=value>=60;
+ if(high&&!gasAlert){gasAlert=true;log('WARNING: simulated gas level crossed the demo threshold.');tone(180,.28,.06);setTimeout(()=>tone(180,.28,.06),360);}
+ if(!high&&gasAlert){gasAlert=false;log('INFO: simulated level returned below threshold.');}
+ $('gasState').innerHTML=high?'<span class="dot" style="background:var(--red);box-shadow:0 0 10px var(--red)"></span> ALERT':'<span class="dot"></span> NORMAL';$('gasDot').className='status-dot'+(high?' red':'');$('gasText').textContent=high?'High simulated level! Warning active. Leave the area in a real emergency.':'Normal simulated level. No gas warning.';
+ if(high){showScreen('⚠ URGENT SAFETY ALERT','GAS DETECTED!','EVERYONE GO OUTSIDE','Gas warning is active and takes priority.',true);}else{showScreen('SMART HOME ALARM','SCAN RFID OR ENTER PIN','System ready','System ready. No alert is active.');}
+}
+function testBeep(){tone(760,.13);log('INFO: test beep played.');if(!gasAlert)showScreen('BUZZER TEST','BEEP!','Audio demonstration','Test beep played in browser.');}
+function resetDemo(){gasAlert=false;$('gasSlider').value=15;updateGas(15);$('activityLog').innerHTML='<div>[READY] Demo reset.</div><div>[INFO] Scan RFID or enter PIN.</div>';log('Simulation ready.');}
+</script>
+</body>
+</html>
